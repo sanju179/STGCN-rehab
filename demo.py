@@ -83,6 +83,8 @@ def Demo(inputs, labels):
     
     model = tf.keras.models.model_from_json(model_json, custom_objects={'tf': tf})
     model.load_weights("pretrain model/best_model.hdf5")
+
+    model.load_weights("pretrain model/best_model.hdf5")
     
     y_pred = model.predict(X)
     y_pred = sc_y.inverse_transform(y_pred) 
